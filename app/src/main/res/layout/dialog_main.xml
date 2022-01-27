@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:app="http://schemas.android.com/apk/res-auto"
+  xmlns:tools="http://schemas.android.com/tools"
+  android:id="@+id/main_dialog_root_view"
+  android:layout_width="wrap_content"
+  android:layout_height="wrap_content"
+  android:orientation="vertical"
+  tools:context=".MainDialog">
+
+  <androidx.recyclerview.widget.RecyclerView
+    android:id="@+id/main_dialog_recycler_view"
+    android:layout_width="match_parent"
+    android:layout_height="200dp" />
+
+  <androidx.appcompat.widget.LinearLayoutCompat
+    android:id="@+id/main_dialog_emoji_bar"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/chat_input_background"
+    android:gravity="center_vertical"
+    android:orientation="horizontal"
+    android:padding="4dp">
+
+    <androidx.appcompat.widget.AppCompatImageButton
+      android:id="@+id/main_dialog_emoji"
+      android:layout_width="48dp"
+      android:layout_height="48dp"
+      android:background="?attr/selectableItemBackgroundBorderless"
+      android:padding="12dp"
+      android:scaleType="centerCrop"
+      app:srcCompat="@drawable/emoji_ios_category_people"
+      tools:ignore="ContentDescription" />
+
+    <dev.leonardpark.emoji.emojicompat.EmojiEditText
+      android:id="@+id/main_dialog_chat_bottom_message_edittext"
+      android:layout_width="0dp"
+      android:layout_height="wrap_content"
+      android:layout_weight="1"
+      android:imeOptions="actionSend"
+      android:inputType="textCapSentences|textMultiLine"
+      android:maxLines="3" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+      android:id="@+id/main_dialog_send"
+      android:layout_width="48dp"
+      android:layout_height="48dp"
+      android:background="?attr/selectableItemBackgroundBorderless"
+      android:padding="12dp"
+      android:scaleType="centerCrop"
+      app:srcCompat="@drawable/ic_send"
+      tools:ignore="ContentDescription" />
+  </androidx.appcompat.widget.LinearLayoutCompat>
+</androidx.appcompat.widget.LinearLayoutCompat>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+  <attr name="emojiSize" format="dimension"/>
+
+  <declare-styleable name="EmojiButton">
+    <attr name="emojiSize"/>
+  </declare-styleable>
+
+  <declare-styleable name="EmojiCheckbox">
+    <attr name="emojiSize"/>
+  </declare-styleable>
+
+  <declare-styleable name="EmojiRadioButton">
+    <attr name="emojiSize"/>
+  </declare-styleable>
+
+  <declare-styleable name="EmojiEditText">
+    <attr name="emojiSize"/>
+  </declare-styleable>
+
+  <declare-styleable name="EmojiTextView">
+    <attr name="emojiSize"/>
+  </declare-styleable>
+
+  <declare-styleable name="EmojiToggleButton">
+    <attr name="emojiSize"/>
+  </declare-styleable>
+</resources>

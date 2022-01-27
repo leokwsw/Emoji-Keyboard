@@ -1,0 +1,11 @@
+rootProject.name = "Emoji"
+include ':app'
+include ':emoji'
+include ':emoji-google'
+include ':emoji-google-compat'
+include ':emoji-ios'
+include ':emoji-one'
+include ':emoji-facebook'
+include ':emoji-windows'
+include ':emoji-twitter'
+include ':emoji-samsung'

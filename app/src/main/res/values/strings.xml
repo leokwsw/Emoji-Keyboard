@@ -1,0 +1,13 @@
+<resources>
+  <string name="app_name">Emoji</string>
+  <string name="variant_group_title">Emoji Variant</string>
+  <string name="variant_facebook_title">Facebook</string>
+  <string name="variant_google_title">Google</string>
+  <string name="variant_google_compat_title">Google Compat</string>
+  <string name="variant_ios_title">iOS</string>
+  <string name="variant_emojione_title">Emoji One</string>
+  <string name="variant_samsung_title">Samsung</string>
+  <string name="variant_twitter_title">Twitter</string>
+  <string name="variant_windows_title">Windows</string>
+  <string name="show_dialog_title">Show Dialog</string>
+</resources>

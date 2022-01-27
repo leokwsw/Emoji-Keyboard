@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:app="http://schemas.android.com/apk/res-auto"
+  xmlns:tools="http://schemas.android.com/tools"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent"
+  tools:context=".MainActivity">
+
+  <com.google.android.material.appbar.AppBarLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:theme="@style/Theme.Emoji.AppBarOverlay">
+
+    <androidx.appcompat.widget.Toolbar
+      android:id="@+id/toolbar"
+      android:layout_width="match_parent"
+      android:layout_height="?attr/actionBarSize"
+      android:background="?attr/colorPrimary"
+      app:popupTheme="@style/Theme.Emoji.PopupOverlay" />
+
+  </com.google.android.material.appbar.AppBarLayout>
+
+  <RelativeLayout
+    android:id="@+id/main_activity_root_view"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+    <dev.leonardpark.emoji.emojicompat.EmojiButton
+      android:id="@+id/emoji_button"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content" />
+
+    <dev.leonardpark.emoji.emojicompat.EmojiToggleButton
+      android:id="@+id/emoji_toggle_button"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_toEndOf="@+id/emoji_checkbox"/>
+
+    <dev.leonardpark.emoji.emojicompat.EmojiTextView
+      android:id="@+id/emoji_textview"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_toEndOf="@+id/emoji_button" />
+
+    <dev.leonardpark.emoji.emojicompat.EmojiCheckbox
+      android:id="@+id/emoji_checkbox"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_below="@+id/emoji_textview"
+      android:layout_toEndOf="@+id/emoji_button" />
+
+    <androidx.recyclerview.widget.RecyclerView
+      android:id="@+id/main_activity_recycler_view"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      tools:listitem="@layout/adapter_chat"
+      android:layout_below="@id/emoji_checkbox" />
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+      android:id="@+id/main_activity_emoji_bar"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_alignParentBottom="true"
+      android:background="@color/chat_input_background"
+      android:gravity="center_vertical"
+      android:orientation="horizontal"
+      android:padding="4dp">
+
+      <androidx.appcompat.widget.AppCompatImageButton
+        android:id="@+id/main_activity_emoji"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        android:padding="12dp"
+        android:scaleType="centerCrop"
+        app:srcCompat="@drawable/emoji_ios_category_people"
+        tools:ignore="ContentDescription" />
+
+      <dev.leonardpark.emoji.emojicompat.EmojiEditText
+        android:id="@+id/main_activity_chat_bottom_message_edittext"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:imeOptions="actionSend|flagNoExtractUi"
+        android:inputType="textCapSentences|textMultiLine"
+        android:maxLines="3" />
+
+      <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/main_activity_send"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        android:padding="12dp"
+        android:scaleType="centerCrop"
+        app:srcCompat="@drawable/ic_send"
+        tools:ignore="ContentDescription" />
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+  </RelativeLayout>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

@@ -1,0 +1,23 @@
+{
+  "name": "emoji-generator",
+  "version": "1.0.0",
+  "description": "Parser and extractor of emojis",
+  "main": "index.js",
+  "scripts": {
+    "start": "node --max-old-space-size=4096 index.js",
+    "start-no-download": "node --max-old-space-size=4096 index.js --no-download"
+  },
+  "author": "Leo Wu",
+  "license": "MIT",
+  "dependencies": {
+    "cheerio": "^1.0.0-rc.1",
+    "command-line-args": "^4.0.6",
+    "download": "^6.2.5",
+    "fs-extra": "^4.0.1",
+    "imagemin": "^5.3.1",
+    "imagemin-optipng": "^5.2.1",
+    "immutable": "^4.0.0-rc.15",
+    "stable": "^0.1.6",
+    "underscore": "^1.8.3"
+  }
+}
